@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', ['uses' => 'UserController@makelogin']);
+
+Route::post('/login', ['as' => 'users.login', 'uses' => 'UserController@login']);
+
